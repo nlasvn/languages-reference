@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Referência</title>
+    <link rel="stylesheet" href="css/prism.css" />
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="scripts/prism.js" defer></script>
+  </head>
+  <body>
+    <h1 class="title-language">Typescript</h1>
+    <p class="explanation">
+      No Typescript usamos tipagem explícita para ajudar o compilador a
+        encontrar bugs referentes aos tipos das nossas variáveis.
+        Não é necessário colocar a assinatura do tipo quando você declara
+         as variáveis com let ou const, pois o Typescript infere elas automaticamente. <br>
+      Tipos:
+      <ul>
+      <li>string</li>
+      <li>number</li>
+      <li>boolean</li>
+      <li>Array&lt;t&gt; ou t[], exemplo: Array&lt;number&gt; ou number[] // é equivalente a list no Python</li>
+      <li>{number, string, boolean} // isso é um object, é equivalente ao dict no Python.</li>
+      </ul>
+    </p>
+    <h2>Declarando variáveis</h2>
+    <pre class="language-typescript"><code>let name = "Marisa";
+let height = 155;
+let isMage = true;
+let spellcards = ["Master Spark", "Stardust Reverie", "Non-Directional Laser"];
+const signature = { "name": "Love Sign \"Master Spark\"" }; //constante</code></pre>
+    <h2>Funções</h2>
+    <pre class="language-typescript"><code>function calcSquare(num: number): number {
+  return num * num;
+}
+
+const numbers = [1, 2, 3, 4, 5];
+const numberPlus1 = numbers.map(function(x) { return x + 1 }); //anonymous function, equivalente ao lambda no Python
+const numbersPlus2 = numbers.map((x) => x + 2); //arrow functions, são uma anonymous function mais ergonômica
+const numberPlus3 = numbers.map((x) => {
+  return x + 3;
+}); //arrow function em várias linhas, é possível fazer o mesmo com uma anonymous function.
+</code></pre>
+    <a href="https://www.typescriptlang.org/docs/handbook/2/everyday-types.html">Mais info sobre declaração de tipos</a>
+  </body>
+</html>
